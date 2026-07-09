@@ -1,17 +1,16 @@
 package fr.diginamic.operations;
 
 /**
-* Instantie un tableau de doubles vide, permet d'ajouter des valeurs
-* et de calculer leur moyenne.
+* Instantie un tableau de doubles vide, permet d'ajouter des valeurs progressivement (ajout())
+* et de calculer leur moyenne (calcul()).
 * @author JoshuaNEVE
 * @version 1.0
  */
-
-
-
 public class CalculMoyenne {
     private double[] tableauDouble;
-
+    /**
+     * Crée une instance avec un tableau vide, prêt à recevoir des valeurs via ajout().
+     */
     public CalculMoyenne(){
         this.tableauDouble = new double[0];
     }
