@@ -1,5 +1,8 @@
 package fr.diginamic.essais;
 
+/*
+Permet de tester Operations avec 4 les operateurs
+ */
 import fr.diginamic.operations.Operations;
 
 public class TestOperations {

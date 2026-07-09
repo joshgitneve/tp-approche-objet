@@ -1,11 +1,16 @@
-/*
-Class de test qui crée des instances de CalculMoyenne et les tests avec des doubles positives et negatives. Deux tests.
- */
+/**
+* Class de test qui crée des instances de CalculMoyenne et les tests avec des doubles positives et negatives. Deux tests.
+* @author JoshuaNEVE
+* @version 1.0
+*/
 
 package fr.diginamic.essais;
 
 import fr.diginamic.operations.CalculMoyenne;
 
+/**
+ * creer deux instances, ajouter des valeurs double, et faire des calculs sur les tableaux.
+ */
 public class TestMoyenne {
     public static void main(String[] args) {
         // Test 1 - positives -

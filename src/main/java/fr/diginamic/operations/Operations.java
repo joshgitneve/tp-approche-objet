@@ -1,15 +1,16 @@
+package fr.diginamic.operations;
 /*
-Class de type util qui contient une methode statique pour faire des calculs selon l'operateur choisi.
-On peut rentrer un de quatre operateurs: +, -, *, /, et deux valeurs double à traiter.
+Contient une methode statique pour faire des calculs selon l'operateur choisi.
+Permet de rentrer un de quatre operateurs: +, -, *, /, et deux valeurs double à traiter.
 @author JoshuaNEVE
 @version 1.0
 
  */
 
-package fr.diginamic.operations;
+
 
 public class Operations {
-    /* Permet de calculer une operation sur deux chiffres double données
+    /* Calculer une operation sur deux chiffres double données
     avec un operateur donné en argument
     @param double a
     @param double b
