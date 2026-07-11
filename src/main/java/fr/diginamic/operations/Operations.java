@@ -26,4 +26,8 @@ public class Operations {
         };
 
     }
+
+    public static double calculFuelEconomie(double litresConsumed, double kmCovered){
+        return litresConsumed / (kmCovered / 100);
+    }
 }

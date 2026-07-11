@@ -15,6 +15,9 @@ public class TestOperations {
         System.out.println("subtract = " + subtract);
         System.out.println("multi = " + multi);
         System.out.println("divide = " + divide);
+
+        double vanFuelEconomie = Operations.calculFuelEconomie(54.48, 664.00);
+        System.out.println("vanFuelEconomie = " + vanFuelEconomie);
     }
 
 }
