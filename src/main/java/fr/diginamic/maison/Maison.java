@@ -17,10 +17,10 @@ public class Maison {
         }
         if (piece.superficie <= 0 || piece.numeroEtage < 0) {
             System.out.println("Piece invalide — non ajoutée");
-            return;
         }
-        else { Piece[] newListOfRooms = new Piece[listOfRooms.length + 1];System.arraycopy(listOfRooms, 0, newListOfRooms, 0, listOfRooms.length);
-        newListOfRooms[listOfRooms.length] = piece; listOfRooms = newListOfRooms;}
+        else { Piece[] newListOfRooms = new Piece[listOfRooms.length + 1];
+            System.arraycopy(listOfRooms, 0, newListOfRooms, 0, listOfRooms.length);
+            newListOfRooms[listOfRooms.length] = piece; listOfRooms = newListOfRooms;}
 
     }
 

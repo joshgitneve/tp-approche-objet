@@ -12,4 +12,5 @@ public class PotionDeSoin extends Potion{
         p.setPointsDeSante(p.getPointsDeSante() + soin);
         System.out.println("Vous buvez " + NOM + " et récupérez " + soin + " points de santé!");
     }
+
 }

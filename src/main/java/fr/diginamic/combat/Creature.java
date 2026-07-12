@@ -22,6 +22,8 @@ public abstract class Creature {
     public void setPointsDeSante(int points) {
         this.pointsDeSante = points;
     }
-
-    public String toString();
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + " (force: " + force + ", santé: " + pointsDeSante + ")";
+    }
 }
