@@ -41,7 +41,7 @@ public class Jeu {
                             System.out.println("Mais tu n'a même pas joué!");
                         } else {
                             System.out.println("Vous quittez avec un score de " +
-                                    personnage.getScore() + "! Merci de jouer!");
+                                    personnage.getScore() + "! Merci pour votre visite!");
                         }
                     return;
                 }

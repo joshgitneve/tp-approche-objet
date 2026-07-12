@@ -9,7 +9,7 @@ public class Combat {
         this.creature = c;
     }
     public void combattre(){
-        System.out.println("Vous rencontrez : " + creature);
+        System.out.println("Vous rencontrez: \n" + creature);
         while (personnage.getPointsDeSante() > 0 && creature.getPointsDeSante() > 0){
             int attaqueP = calculerAttaque(personnage.getForceEffective());
             int attaqueC = calculerAttaque(creature.getForce());
@@ -22,7 +22,7 @@ public class Combat {
         }
         if (personnage.getPointsDeSante() > 0){
             personnage.setScore(personnage.getScore() + creature.getScoreBonus());
-            System.out.println("Vous avez vaincu " + creature + "! Score: " + personnage.getScore());
+            System.out.println("Vous avez vaincu \n" + creature + "! Score: " + personnage.getScore());
             decrementerPotions();
             attribuerRecompense();
 
