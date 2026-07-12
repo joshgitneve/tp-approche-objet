@@ -40,8 +40,9 @@ public class Jeu {
                     scanner.close(); if (personnage == null) {
                             System.out.println("Mais tu n'a même pas joué!");
                         } else {
-
-                        System.out.println("Vous quittez avec un score de " + personnage.getScore() + "! Merci de jouer!");}
+                            System.out.println("Vous quittez avec un score de " +
+                                    personnage.getScore() + "! Merci de jouer!");
+                        }
                     return;
                 }
                     default -> throw new IllegalArgumentException("Entrez une choix valide");
