@@ -14,42 +14,51 @@ public class Jeu {
         int choix = 0;
         while (true) {
             afficherMenu();
-            choix = scanner.nextInt();
-            switch (choix) {
-                case 1 -> {
-                    personnage = new Personnage();
-                    System.out.println("Personnage créé! Force: " + personnage.getForce() +
-                            ", Santé: " + personnage.getPointsDeSante());
-                }
-                case 2 -> { if (personnage == null) {
-                    System.out.println("Créez d'abord un personnage!");
-                } else {
-                    new Combat(personnage, createCreature()).combattre();}
-                }
-                case 3 -> { if (personnage == null) {
-                    System.out.println("Créez d'abord un personnage!");
-                } else prendrePotion();
-                }
-                    case 4 -> { if (personnage == null) {
-                        System.out.println("Créez d'abord un personnage!");
-                    } else {
-                        System.out.println(" Votre score est actuellement de " + personnage.getScore());
+            try {
+                choix = scanner.nextInt();
+                switch (choix) {
+                    case 1 -> {
+                        personnage = new Personnage();
+                        System.out.println("Personnage créé! Force: " + personnage.getForce() +
+                                ", Santé: " + personnage.getPointsDeSante());
                     }
-                }
+                    case 2 -> {
+                        if (personnage == null) {
+                            System.out.println("Créez d'abord un personnage!");
+                        } else {
+                            new Combat(personnage, createCreature()).combattre();
+                        }
+                    }
+                    case 3 -> {
+                        if (personnage == null) {
+                            System.out.println("Créez d'abord un personnage!");
+                        } else prendrePotion();
+                    }
+                    case 4 -> {
+                        if (personnage == null) {
+                            System.out.println("Créez d'abord un personnage!");
+                        } else {
+                            System.out.println(" Votre score est actuellement de " + personnage.getScore());
+                        }
+                    }
                     case 5 -> {
-                    scanner.close(); if (personnage == null) {
+                        scanner.close();
+                        if (personnage == null) {
                             System.out.println("Mais tu n'a même pas joué!");
                         } else {
                             System.out.println("Vous quittez avec un score de " +
                                     personnage.getScore() + "! Merci pour votre visite!");
                         }
-                    return;
-                }
+                        return;
+                    }
                     default -> throw new IllegalArgumentException("Entrez une choix valide");
-                }
 
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println("Choix invalide — entrez un nombre entre 1 et 5.");
             }
         }
+    }
 
     private Creature createCreature () {
         Creature[] bestiaire = {
