@@ -1,5 +1,6 @@
 package fr.diginamic.combat;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Jeu {
@@ -56,7 +57,10 @@ public class Jeu {
                 }
             } catch (IllegalArgumentException e) {
                 System.out.println("Choix invalide — entrez un nombre entre 1 et 5.");
-            }
+            } catch (InputMismatchException e) {
+            System.out.println("Entrez un chiffre!");
+            scanner.nextLine();   // clears the bad input from the buffer
+        }
         }
     }
 
@@ -86,6 +90,10 @@ public class Jeu {
             System.out.println((i + 1) + ". " + potions[i].getNom());}
         int choice = scanner.nextInt() -1;
         potions[choice].consommer(personnage);
+        if (potions[choice] instanceof PotionDeSoin){
+            personnage.retirerPotion(choice);
+        }
+
     }
 }
 

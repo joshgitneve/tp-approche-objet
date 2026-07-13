@@ -25,6 +25,13 @@ public class Personnage {
         System.arraycopy(potions, 0, newPotions, 0, potions.length);
         newPotions[potions.length] = potion; potions = newPotions;
     }
+    public void retirerPotion(int choixPotion){
+        Potion[] new2Potions = new Potion[potions.length - 1];
+        System.arraycopy(potions, 0, new2Potions, 0, choixPotion);
+        System.arraycopy(potions, choixPotion +1, new2Potions, choixPotion, potions.length-choixPotion-1);
+        potions = new2Potions;
+
+    }
 
     public int getForceEffective(){
         int bonus = 0;

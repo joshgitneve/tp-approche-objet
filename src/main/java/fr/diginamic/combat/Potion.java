@@ -8,12 +8,13 @@ public abstract class Potion {
 
     public boolean getPotionActive() { return false;}
 
-    public int getBonusForce() { return 0;};
+    public int getBonusForce() { return 0;}
 
-    public void decrementerCombatsRestants(){};
+    public void decrementerCombatsRestants(){}
+
+    public int getCombatsRestants() {return 0;}
 
     @Override
-    public String toString(){
-        return getNom();
-    }
+    public String toString(){return getNom();}
+
 }

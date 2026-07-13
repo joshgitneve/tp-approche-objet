@@ -36,10 +36,17 @@ public class Combat {
     }
 
     private void decrementerPotions(){
-        for (Potion potion : personnage.getPotions()){
-            if (potion.getPotionActive()){
-                potion.decrementerCombatsRestants();
+        Potion[] potions = personnage.getPotions();
+        for (int i = potions.length -1; i >= 0; i--) {
+            if (potions[i].getPotionActive()) {
+                potions[i].decrementerCombatsRestants();
+                if (potions[i].getCombatsRestants() == 0){
+                    personnage.retirerPotion(i);
+                }
+
             }
+
+
         }
     }
 

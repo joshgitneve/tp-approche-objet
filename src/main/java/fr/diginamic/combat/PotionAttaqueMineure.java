@@ -11,9 +11,11 @@ public class PotionAttaqueMineure extends Potion{
 
     @Override
     public void consommer(Personnage p){
+        if (potionActive) {
+            System.out.println("Cette potion est déjà active!");
+            return;}
         System.out.println("Vous buvez " + NOM + " et récupérez de la force!");
         potionActive = true;
-
     }
     @Override
     public int getBonusForce() {
