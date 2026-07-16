@@ -87,8 +87,18 @@ public class Jeu {
             return;
         }
         for (int i = 0; i < potions.length; i++) {
-            System.out.println((i + 1) + ". " + potions[i].getNom());}
+            String display = (i + 1) + ". " + potions[i].getNom();
+            if (potions[i].getPotionActive()) {
+                display += " (active — " + potions[i].getCombatsRestants() + " combat(s) restant(s))";
+            }
+            System.out.println(display);
+        }
+        System.out.println("Choisissez une option : ");
         int choice = scanner.nextInt() -1;
+        if (choice < 0 || choice >= potions.length) {
+            System.out.println("Choix invalide!");
+            return;
+        }
         potions[choice].consommer(personnage);
         if (potions[choice] instanceof PotionDeSoin){
             personnage.retirerPotion(choice);
@@ -96,6 +106,7 @@ public class Jeu {
 
     }
 }
+
 
 
 
